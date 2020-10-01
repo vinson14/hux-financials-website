@@ -6,6 +6,7 @@ import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Testimonial from "./components/Testimonial";
 import NavBar from "./components/NavBar";
 
 const baseUrl = "/hux-financials-website"
@@ -19,6 +20,7 @@ function App() {
                     <Route path={`${baseUrl}/`} exact component={Home} />
                     <Route path={`${baseUrl}/about`} exact component={About} />
                     <Route path={`${baseUrl}/contact`} exact component={Contact} />
+                    <Route path={`${baseUrl}/testimonial`} exact component={Testimonial} />
                 </Switch>
             </div>
         </Router>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-class About extends React.Component {
+class Testimonial extends React.Component {
     constructor() {
         super()
     }
@@ -9,11 +9,11 @@ class About extends React.Component {
         return(
             <div className="h-100 d-flex justify-content-center align-items-center">
                 <h1>
-                    About Page
+                    Testimonial Page
                 </h1>
             </div>
         )
     }
 }
 
-export default About
+export default Testimonial
