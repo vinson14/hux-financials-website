@@ -8,15 +8,17 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 
+const baseUrl = "/hux-financials-website"
+
 function App() {
     return (
         <Router>
             <div className="App">
                 <NavBar />
                 <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/about" exact component={About} />
-                    <Route path="/contact" exact component={Contact} />
+                    <Route path={`${baseUrl}/`} exact component={Home} />
+                    <Route path={`${baseUrl}/about`} exact component={About} />
+                    <Route path={`${baseUrl}/contact`} exact component={Contact} />
                 </Switch>
             </div>
         </Router>

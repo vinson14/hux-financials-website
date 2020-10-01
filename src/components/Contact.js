@@ -7,7 +7,7 @@ class Contact extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="h-100 d-flex justify-content-center align-items-center">
                 <h1>
                     Contact Page
                 </h1>
