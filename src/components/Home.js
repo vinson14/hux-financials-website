@@ -3,9 +3,6 @@ import React from "react";
 import LandingPage from "./LandingPage";
 
 class Home extends React.Component {
-    constructor() {
-        super();
-    }
 
     render() {
         return (

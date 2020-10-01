@@ -3,9 +3,6 @@ import * as BS from "react-bootstrap";
 import "../static/css/homecontent.css"
 
 class LandingPage extends React.Component {
-    constructor() {
-        super()
-    }
 
     render () {
         return (
