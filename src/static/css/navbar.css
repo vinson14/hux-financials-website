@@ -9,3 +9,18 @@
 .navbar-toggler-icon {
     color: white !important;
 }
+
+.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+a.a-text:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: white !important;
+}
+
+a.a-text {
+color: #f8f9fa !important;
+}
