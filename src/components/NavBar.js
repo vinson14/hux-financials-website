@@ -19,14 +19,14 @@ class NavBar extends React.Component {
     render() {
         const links = this.state.links.map((link) => {
             return (
-                <BS.Nav.Link href={`#${link.home}`} key={link.id} className="text-light lead">
+                <BS.Nav.Link href={`#${link.home}`} key={link.id} className=" px-3 text-light">
                     {link.text}
                 </BS.Nav.Link>
             );
         });
 
         return (
-            <BS.Navbar expand="lg" className="sticky-top p-3 bg-red-solid">
+            <BS.Navbar expand="lg" className="fixed-top p-3 bg-red-solid navbar-dark">
                 <BS.Navbar.Brand href="#home" className="pl-3">
                     <BS.Image src={logo} width="195" height="60"/>
                 </BS.Navbar.Brand>

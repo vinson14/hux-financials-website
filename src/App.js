@@ -1,14 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import "./App.css";
 
 import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
     return (
-        <div className="App">
-            <Home />
-        </div>
+        <Router>
+            <div className="App">
+                <Route path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+            </div>
+        </Router>
     );
 }
 

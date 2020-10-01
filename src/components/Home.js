@@ -3,7 +3,7 @@ import * as BS from "react-bootstrap";
 import logo from "../static/logos/Hux_Long_Dark.png";
 
 import NavBar from "./NavBar";
-import HomeContent from "./HomeContent";
+import LandingPage from "./LandingPage";
 
 class Home extends React.Component {
     constructor() {
@@ -12,9 +12,9 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="Home">
                 <NavBar />
-                <HomeContent />
+                <LandingPage />
             </div>
         );
     }
