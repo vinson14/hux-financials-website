@@ -31,7 +31,7 @@ class About extends React.Component {
     render() {
         return (
             <div>
-                <Header position="sticky" />
+                <Header position="sticky" bg="white" />
                 <Container className="h-100 d-flex flex-column justify-content-center align-items-center pt-5">
                     <Row>
                         <h1 className="pri-font font-weight-bold mb-5">Our Team</h1>

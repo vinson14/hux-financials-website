@@ -61,14 +61,14 @@ class NavBarMobile extends React.Component {
         });
 
         return (
-            <div className={`${this.props.position}-top`}>
-                <div className="d-lg-none d-flex justify-content-between">
+            <div className={`${this.props.position}-top bg-${this.props.bg}`}>
+                <div className="d-flex justify-content-between">
                     <a>
                         <Image src={this.state.logo} width="250" />
                     </a>
                     <a
                         id="toggle-navbar-btn"
-                        className="btn bg-transparent z-depth-0 p-5 d-lg-none d-flex align-items-center"
+                        className="btn bg-transparent z-depth-0 p-5 d-flex align-items-center"
                         onClick={this.toggleNavBarMobile}
                     >
                         <i

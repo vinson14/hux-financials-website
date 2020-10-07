@@ -10,7 +10,7 @@ class Home extends React.Component {
 
         return (
             <div className="Home">
-                <Header position="sticky" />
+                <Header position="fixed" bg="transparent"/>
                 <LandingPage />
             </div>
         );

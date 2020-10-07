@@ -20,31 +20,8 @@ class NavBar extends React.Component {
                 { id: 3, text: "Contact Us", path: `${baseUrl}/contact` },
                 { id: 4, text: "Testimonials", path: `${baseUrl}/testimonial` },
             ],
-            sidebarActive: "",
-            toggleIcon: "fa-bars",
-            iconColor: "text-dark",
-            logo: logoDark,
         };
     }
-
-    toggleSideBar = () => {
-        console.log("clicked");
-        if (this.state.sidebarActive) {
-            this.setState({
-                sidebarActive: "",
-                toggleIcon: "fa-bars",
-                iconColor: "text-dark",
-                logo: logoDark,
-            });
-        } else {
-            this.setState({
-                sidebarActive: "sidebar-active",
-                toggleIcon: "fa-times",
-                iconColor: "text-light",
-                logo: logoLight,
-            });
-        }
-    };
 
     render() {
         const horizontal_links = this.state.links.map((link) => {
@@ -60,25 +37,10 @@ class NavBar extends React.Component {
             );
         });
 
-        const vertical_links = this.state.links.map((link) => {
-            return (
-                <NavLink
-                    key={link.id}
-                    to={link.path}
-                    className="h3 my-3 py-1 a-text nav-hover pri-font fit-content"
-                    onClick={this.toggleSideBar}
-                    exact
-                >
-                    {link.text}
-                </NavLink>
-            );
-        });
-
         return (
-            <div>
                 <BS.Navbar
                     expand="lg"
-                    className={`${this.props.position}-top p-3 bg-red-solid navbar-dark d-none d-lg-flex`}
+                    className={`${this.props.position}-top p-3 bg-red-solid navbar-dark d-flex`}
                 >
                     <BS.Navbar.Brand href="#home" className="pl-3">
                         <BS.Image
@@ -94,8 +56,6 @@ class NavBar extends React.Component {
                         </BS.Nav>
                     </BS.Navbar.Collapse>
                 </BS.Navbar>
-                <NavBarMobile />
-            </div>
         );
     }
 }
