@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import ProfileCard from "./micro-components/ProfileCard";
 import NavBar from "./micro-components/NavBar";
+import Header from "./micro-components/Header";
 
 const profiles = [
     {
@@ -30,7 +31,7 @@ class About extends React.Component {
     render() {
         return (
             <div>
-                <NavBar position="sticky" />
+                <Header position="sticky" />
                 <Container className="h-100 d-flex flex-column justify-content-center align-items-center pt-5">
                     <Row>
                         <h1 className="pri-font font-weight-bold mb-5">Our Team</h1>

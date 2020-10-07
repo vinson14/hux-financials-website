@@ -1,0 +1,59 @@
+.bg-red-solid {
+    background-color: #d31145;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler-icon {
+    color: white !important;
+}
+
+.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+a.a-text:hover {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    color: white !important;
+}
+
+a.a-text {
+    color: #f8f9fa !important;
+}
+
+.fit-content {
+    max-width: fit-content;
+}
+
+
+
+/** Collapsing Side Bar **/
+
+#navbar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: all 0.6s;
+}
+
+#toggle-navbar-btn {
+    z-index: 6;
+}
+
+.navbar-mobile-active {
+  -webkit-transform: translateX(0%) !important;
+  transform: translateX(0%) !important;
+}
