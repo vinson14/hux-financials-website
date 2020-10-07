@@ -19,7 +19,6 @@ const profiles = [
 
 class About extends React.Component {
     render() {
-        console.log(this.props.match);
         return (
             <Container className="h-100 d-flex flex-column justify-content-center align-items-center pt-5">
                 <Row>

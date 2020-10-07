@@ -2,7 +2,9 @@ import React from "react";
 import * as BS from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-import logo from "../static/logos/light-cropped.png";
+import logoLightCropped from "../static/logos/light-cropped.png";
+import logoLight from "../static/logos/light.png";
+import logoDark from "../static/logos/dark.png";
 import "../static/css/navbar.css";
 
 const baseUrl = "/hux-financials-website";
@@ -19,25 +21,27 @@ class NavBar extends React.Component {
             ],
             sidebarActive: "",
             toggleIcon: "fa-bars",
-            iconColor: "text-dark"
+            iconColor: "text-dark",
+            logo: logoDark
         };
     }
 
     toggleSideBar = () => {
         console.log("clicked")
         if (this.state.sidebarActive) {
-            console.log('hi')
             this.setState({
                 sidebarActive: "",
                 toggleIcon: "fa-bars",
-                iconColor: "text-dark"
+                iconColor: "text-dark",
+                logo: logoDark
             });
             
         } else {
             this.setState({
                 sidebarActive: "sidebar-active",
                 toggleIcon: "fa-times",
-                iconColor: "text-light"
+                iconColor: "text-light",
+                logo: logoLight
             });
         }
     };
@@ -61,7 +65,7 @@ class NavBar extends React.Component {
                 <NavLink
                     key={link.id}
                     to={link.path}
-                    className="my-3 py-1 a-text nav-hover pri-font fit-content"
+                    className="h3 my-3 py-1 a-text nav-hover pri-font fit-content"
                     onClick={this.toggleSideBar}
                     exact
                 >
@@ -77,7 +81,7 @@ class NavBar extends React.Component {
                     className="fixed-top p-3 bg-red-solid navbar-dark d-none d-lg-flex"
                 >
                     <BS.Navbar.Brand href="#home" className="pl-3">
-                        <BS.Image src={logo} width="195" height="60" />
+                        <BS.Image src={logoLight} width="195" height="60" />
                     </BS.Navbar.Brand>
                     <BS.Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <BS.Navbar.Collapse id="basic-navbar-nav" className="pr-3">
@@ -86,6 +90,9 @@ class NavBar extends React.Component {
                         </BS.Nav>
                     </BS.Navbar.Collapse>
                 </BS.Navbar>
+                <a>
+                    <BS.Image src={this.state.logo} width="250" className="fixed-top" />
+                </a>
                 <a
                     id="sidebar-expand"
                     className="btn bg-transparent z-depth-0 p-3 d-lg-none"

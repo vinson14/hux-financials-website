@@ -1,8 +1,16 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import SecButton from "./SecButton";
+
 
 class ProfileCard extends React.Component {
     render() {
+
+        const button_data = {
+            text: "See more",
+            href: `${this.props.url}/${this.props.profile.name}`
+        }
+
         return (
             <Card className="border-0">
                 <Card.Img
@@ -11,7 +19,7 @@ class ProfileCard extends React.Component {
                 <Card.Body>
                     <Card.Title>{this.props.profile.name}</Card.Title>
                     <Card.Text>Associate Financial Consultant</Card.Text>
-                    <Button href={`${this.props.url}/${this.props.profile.name}`}>See More</Button>
+                    <SecButton data={button_data} />
                 </Card.Body>
             </Card>
         );

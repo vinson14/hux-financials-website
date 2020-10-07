@@ -13,7 +13,8 @@ class Profile extends React.Component {
                         />
                     </Col>
                     <Col md={6} className="p-5 align-items-center d-flex">
-                        <p>
+
+                        <h3 className="pri-font">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -23,7 +24,7 @@ class Profile extends React.Component {
                             eu fugiat nulla pariatur. Excepteur sint occaecat
                             cupidatat non proident, sunt in culpa qui officia
                             deserunt mollit anim id est laborum."
-                        </p>
+                        </h3>
                     </Col>
                 </Row>
             </Container>
