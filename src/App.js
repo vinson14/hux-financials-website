@@ -11,11 +11,12 @@ import Profile from "./components/Profile";
 
 const baseUrl = "/hux-financials-website";
 
-function App() {
+function App(props) {
     return (
         <Router>
-            <Switch>
-                <div className="App">
+            <div className="App">
+                <Switch>
+                    {" "}
                     <Route path={`${baseUrl}/`} exact component={Home} />
                     <Route path={`${baseUrl}/about`} exact component={About} />
                     <Route
@@ -32,8 +33,8 @@ function App() {
                         exact
                         component={Testimonial}
                     />
-                </div>
-            </Switch>
+                </Switch>
+            </div>
         </Router>
     );
 }
