@@ -1,0 +1,10 @@
+.home-background {
+    background-image: url(../img/snow-mountain.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#landing-page-caption {
+    color: white;
+    background-color: rgba(50, 50, 50, 0.7);
+}
