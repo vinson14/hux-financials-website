@@ -6,6 +6,7 @@ import logoLightCropped from "../../static/logos/light-cropped.png";
 import logoLight from "../../static/logos/light.png";
 import logoDark from "../../static/logos/dark.png";
 import "../../static/css/navbar.css";
+import NavBarMobile from "./NavBarMobile";
 
 const baseUrl = "/hux-financials-website";
 
@@ -93,28 +94,7 @@ class NavBar extends React.Component {
                         </BS.Nav>
                     </BS.Navbar.Collapse>
                 </BS.Navbar>
-                <div className={`${this.props.position}-top d-lg-none d-flex justify-content-between`}>
-                    <a>
-                        <BS.Image src={this.state.logo} width="250" />
-                    </a>
-                    <a
-                        id="sidebar-expand"
-                        className="btn bg-transparent z-depth-0 p-5 d-lg-none d-flex align-items-center"
-                        onClick={this.toggleSideBar}
-                    >
-                        <i
-                            id="sidebar-expand-icon"
-                            className={`fas ${this.state.toggleIcon} fa-2x ${this.state.iconColor}`}
-                        ></i>
-                    </a>
-                </div>
-
-                <BS.Nav
-                    id="sidebar"
-                    className={`${this.state.sidebarActive} flex-column bg-red-solid justify-content-center align-items-center`}
-                >
-                    {vertical_links}
-                </BS.Nav>
+                <NavBarMobile />
             </div>
         );
     }
