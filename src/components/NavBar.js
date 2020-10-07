@@ -77,7 +77,7 @@ class NavBar extends React.Component {
             <div>
                 <BS.Navbar
                     expand="lg"
-                    className={`${this.props.sticky}-top p-3 bg-red-solid navbar-dark d-none d-lg-flex`}
+                    className={`${this.props.position}-top p-3 bg-red-solid navbar-dark d-none d-lg-flex`}
                 >
                     <BS.Navbar.Brand href="#home" className="pl-3">
                         <BS.Image
@@ -93,7 +93,7 @@ class NavBar extends React.Component {
                         </BS.Nav>
                     </BS.Navbar.Collapse>
                 </BS.Navbar>
-                <div className={`${this.props.sticky}-top d-lg-none d-flex justify-content-between`}>
+                <div className={`${this.props.position}-top d-lg-none d-flex justify-content-between`}>
                     <a>
                         <BS.Image src={this.state.logo} width="250" />
                     </a>

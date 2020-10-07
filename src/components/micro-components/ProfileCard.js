@@ -17,8 +17,8 @@ class ProfileCard extends React.Component {
                     src={require(`../../static/img/${this.props.profile.name}.jpg`)}
                 />
                 <Card.Body>
-                    <Card.Title>{this.props.profile.name}</Card.Title>
-                    <Card.Text>Associate Financial Consultant</Card.Text>
+                    <Card.Title className="pri-font font-weight-bold">{this.props.profile.name}</Card.Title>
+                    <Card.Text className="sec-font">Associate Financial Consultant</Card.Text>
                     <SecButton data={button_data} />
                 </Card.Body>
             </Card>

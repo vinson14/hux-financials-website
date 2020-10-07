@@ -8,7 +8,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="Home">
-                <NavBar sticky={"fixed"} />
+                <NavBar position={"fixed"} />
                 <LandingPage />
             </div>
         );

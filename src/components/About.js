@@ -16,13 +16,22 @@ const profiles = [
     {
         name: "Lydia",
     },
+    {
+        name: "Vinson",
+    },
+    {
+        name: "Hux",
+    },
+    {
+        name: "Lydia",
+    }
 ];
 
 class About extends React.Component {
     render() {
         return (
             <div>
-                <NavBar sticky="sticky"/>
+                <NavBar position="sticky" />
                 <Container className="h-100 d-flex flex-column justify-content-center align-items-center pt-5">
                     <Row>
                         <h1>Our Team</h1>
