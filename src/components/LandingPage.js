@@ -17,7 +17,7 @@ class LandingPage extends React.Component {
                 <Row>
                     <Col className="p-5">
                         <div id="landing-page-caption" className="p-5">
-                            <h1 className="pri-font font-weight-bold">Life is a constant uphill battle</h1>
+                            <h1 className="pri-font font-weight-bold">Life is an uphill battle</h1>
                             <h4 className="sec-font">Start your climb with us today</h4>
                             <PriButton data={data} />
                         </div>
