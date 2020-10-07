@@ -27,7 +27,7 @@ class About extends React.Component {
                 </Row>
                 <Row>
                     {profiles.map((profile) => (
-                        <Col xs={12} md={6} lg={4} key={profile.name}>
+                        <Col xs={12} md={6} lg={4} key={profile.name} >
                             <ProfileCard
                                 profile={profile}
                                 url={this.props.match.url}

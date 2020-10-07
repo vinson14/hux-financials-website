@@ -1,5 +1,5 @@
 .bg-red-solid {
-    background-color: #d31145;   
+    background-color: #d31145;
 }
 
 .navbar-toggler {
@@ -17,10 +17,11 @@
 
 a.a-text:hover {
     font-weight: bold;
+    border-bottom: 2px solid white;
     text-decoration: none;
     color: white !important;
 }
 
 a.a-text {
-color: #f8f9fa !important;
+    color: #f8f9fa !important;
 }

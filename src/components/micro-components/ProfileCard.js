@@ -4,7 +4,7 @@ import { Card, Button } from "react-bootstrap";
 class ProfileCard extends React.Component {
     render() {
         return (
-            <Card>
+            <Card className="border-0">
                 <Card.Img
                     src={require(`../../static/img/${this.props.profile.name}.jpg`)}
                 />

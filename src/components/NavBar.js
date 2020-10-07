@@ -26,7 +26,7 @@ class NavBar extends React.Component {
                 <NavLink
                     key={link.id}
                     to={link.path}
-                    className="mx-3 py-1 a-text nav-hover"
+                    className="mx-3 py-1 a-text nav-hover pri-font"
                     exact
                 >
                     {link.text}
