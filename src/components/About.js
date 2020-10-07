@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import ProfileCard from "./micro-components/ProfileCard";
 import NavBar from "./NavBar";
-import Profile from "./Profile";
 
 const profiles = [
     {
@@ -17,13 +16,13 @@ const profiles = [
         name: "Lydia",
     },
     {
-        name: "Vinson",
+        name: "Seraphine",
     },
     {
-        name: "Hux",
+        name: "Jia Xin",
     },
     {
-        name: "Lydia",
+        name: "Kendra",
     }
 ];
 
@@ -34,7 +33,7 @@ class About extends React.Component {
                 <NavBar position="sticky" />
                 <Container className="h-100 d-flex flex-column justify-content-center align-items-center pt-5">
                     <Row>
-                        <h1>Our Team</h1>
+                        <h1 className="pri-font font-weight-bold mb-5">Our Team</h1>
                     </Row>
                     <Row>
                         {profiles.map((profile) => (

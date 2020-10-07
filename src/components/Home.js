@@ -1,7 +1,7 @@
 import React from "react";
 
-import NavBar from "./NavBar.js"
-import LandingPage from "./LandingPage";
+import NavBar from "./micro-components/NavBar"
+import LandingPage from "./micro-components/LandingPage";
 
 class Home extends React.Component {
 

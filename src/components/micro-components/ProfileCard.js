@@ -12,7 +12,7 @@ class ProfileCard extends React.Component {
         }
 
         return (
-            <Card className="border-0">
+            <Card className="border-0 my-3">
                 <Card.Img
                     src={require(`../../static/img/${this.props.profile.name}.jpg`)}
                 />
