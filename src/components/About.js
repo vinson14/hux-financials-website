@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import ProfileCard from "./micro-components/ProfileCard";
-import NavBar from "./NavBar";
+import NavBar from "./micro-components/NavBar";
 
 const profiles = [
     {

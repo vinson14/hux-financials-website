@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import NavBar from "./NavBar";
+import NavBar from "./micro-components/NavBar";
 
 class Profile extends React.Component {
     render() {
