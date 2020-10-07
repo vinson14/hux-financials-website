@@ -16,7 +16,6 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <NavBar />
                 <Route path={`${baseUrl}/`} exact component={Home} />
                 <Route path={`${baseUrl}/about`} exact component={About} />
                 <Route path={`${baseUrl}/about/:name`} component={Profile} />

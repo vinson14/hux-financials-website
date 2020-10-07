@@ -50,9 +50,6 @@ a.a-text {
 }
 
 #sidebar-expand {
-    position: fixed;
-    top: 20px;
-    right: 0px;
     z-index: 6;
 }
 

@@ -22,26 +22,25 @@ class NavBar extends React.Component {
             sidebarActive: "",
             toggleIcon: "fa-bars",
             iconColor: "text-dark",
-            logo: logoDark
+            logo: logoDark,
         };
     }
 
     toggleSideBar = () => {
-        console.log("clicked")
+        console.log("clicked");
         if (this.state.sidebarActive) {
             this.setState({
                 sidebarActive: "",
                 toggleIcon: "fa-bars",
                 iconColor: "text-dark",
-                logo: logoDark
+                logo: logoDark,
             });
-            
         } else {
             this.setState({
                 sidebarActive: "sidebar-active",
                 toggleIcon: "fa-times",
                 iconColor: "text-light",
-                logo: logoLight
+                logo: logoLight,
             });
         }
     };
@@ -78,10 +77,14 @@ class NavBar extends React.Component {
             <div>
                 <BS.Navbar
                     expand="lg"
-                    className="fixed-top p-3 bg-red-solid navbar-dark d-none d-lg-flex"
+                    className={`${this.props.sticky}-top p-3 bg-red-solid navbar-dark d-none d-lg-flex`}
                 >
                     <BS.Navbar.Brand href="#home" className="pl-3">
-                        <BS.Image src={logoLight} width="195" height="60" />
+                        <BS.Image
+                            src={logoLightCropped}
+                            width="195"
+                            height="60"
+                        />
                     </BS.Navbar.Brand>
                     <BS.Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <BS.Navbar.Collapse id="basic-navbar-nav" className="pr-3">
@@ -90,19 +93,21 @@ class NavBar extends React.Component {
                         </BS.Nav>
                     </BS.Navbar.Collapse>
                 </BS.Navbar>
-                <a>
-                    <BS.Image src={this.state.logo} width="250" className="fixed-top" />
-                </a>
-                <a
-                    id="sidebar-expand"
-                    className="btn bg-transparent z-depth-0 p-3 d-lg-none"
-                    onClick={this.toggleSideBar}
-                >
-                    <i
-                        id="sidebar-expand-icon"
-                        className={`fas ${this.state.toggleIcon} fa-2x ${this.state.iconColor}`}
-                    ></i>
-                </a>
+                <div className={`${this.props.sticky}-top d-lg-none d-flex justify-content-between`}>
+                    <a>
+                        <BS.Image src={this.state.logo} width="250" />
+                    </a>
+                    <a
+                        id="sidebar-expand"
+                        className="btn bg-transparent z-depth-0 p-5 d-lg-none d-flex align-items-center"
+                        onClick={this.toggleSideBar}
+                    >
+                        <i
+                            id="sidebar-expand-icon"
+                            className={`fas ${this.state.toggleIcon} fa-2x ${this.state.iconColor}`}
+                        ></i>
+                    </a>
+                </div>
 
                 <BS.Nav
                     id="sidebar"
