@@ -10,19 +10,16 @@ import "../../static/css/navbarmobile.css";
 const baseUrl = "/hux-financials-website";
 
 class NavBarMobile extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            links: [
-                { id: 1, text: "Home", path: `/` },
-                { id: 2, text: "About", path: `/about` },
-                { id: 3, text: "Contact Us", path: `/contact` },
-                { id: 4, text: "Testimonials", path: `/testimonial` },
-            ],
+            links: this.props.parameters.links,
             navbarMobileActive: "",
             toggleIcon: "fa-bars",
             iconColor: "text-dark",
             logo: logoDark,
+            bg: this.props.parameters.bg,
+            position: this.props.parameters.position
         };
     }
 
@@ -61,7 +58,7 @@ class NavBarMobile extends React.Component {
         });
 
         return (
-            <div className={`${this.props.position}-top bg-${this.props.bg}`}>
+            <div className={`${this.state.position}-top bg-${this.state.bg}`}>
                 <div className="d-flex justify-content-between">
                     <a>
                         <Image src={this.state.logo} width="250" />

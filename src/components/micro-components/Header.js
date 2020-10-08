@@ -6,14 +6,16 @@ import NavBar from "./NavBar";
 const baseUrl = "/hux-financials-website";
 
 class Header extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
+            position: this.props.position,
+            bg: this.props.bg,
             links: [
-                { id: 1, text: "Home", path: `${baseUrl}/` },
-                { id: 2, text: "About", path: `${baseUrl}/about` },
-                { id: 3, text: "Contact Us", path: `${baseUrl}/contact` },
-                { id: 4, text: "Testimonials", path: `${baseUrl}/testimonial` },
+                { id: 1, text: "Home", path: '/' },
+                { id: 2, text: "About", path: '/about' },
+                { id: 3, text: "Contact Us", path: '/contact' },
+                { id: 4, text: "Testimonials", path: '/testimonial' },
             ],
             isMobile: false,
         };
@@ -34,9 +36,9 @@ class Header extends React.Component {
 
     render() {
         if (this.state.isMobile) {
-            return <NavBarMobile position={this.props.position} bg={this.props.bg} />;
+            return <NavBarMobile parameters={this.state} />;
         } else {
-            return <NavBar position={this.props.position} />;
+            return <NavBar parameters={this.state} />;
         }
     }
 }
