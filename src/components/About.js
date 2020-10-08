@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import ProfileCard from "./micro-components/ProfileCard";
-import NavBar from "./micro-components/NavBar";
 import Header from "./micro-components/Header";
+import Footer from "./micro-components/Footer";
 
 const profiles = [
     {
@@ -47,6 +47,7 @@ class About extends React.Component {
                         ))}
                     </Row>
                 </Container>
+                <Footer />
             </div>
         );
     }
