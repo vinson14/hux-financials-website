@@ -13,23 +13,23 @@ const baseUrl = "/hux-financials-website";
 
 function App(props) {
     return (
-        <Router>
+        <Router basename="/">
             <div className="App">
                 <Switch>
                     {" "}
-                    <Route path={`${baseUrl}/`} exact component={Home} />
-                    <Route path={`${baseUrl}/about`} exact component={About} />
+                    <Route path='/' exact component={Home} />
+                    <Route path='/about' exact component={About} />
                     <Route
-                        path={`${baseUrl}/about/:name`}
+                        path='/about/name'
                         component={Profile}
                     />
                     <Route
-                        path={`${baseUrl}/contact`}
+                        path='/contact'
                         exact
                         component={Contact}
                     />
                     <Route
-                        path={`${baseUrl}/testimonial`}
+                        path='/testimonial'
                         exact
                         component={Testimonial}
                     />

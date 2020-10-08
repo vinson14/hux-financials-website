@@ -14,10 +14,10 @@ class NavBarMobile extends React.Component {
         super();
         this.state = {
             links: [
-                { id: 1, text: "Home", path: `${baseUrl}/` },
-                { id: 2, text: "About", path: `${baseUrl}/about` },
-                { id: 3, text: "Contact Us", path: `${baseUrl}/contact` },
-                { id: 4, text: "Testimonials", path: `${baseUrl}/testimonial` },
+                { id: 1, text: "Home", path: `/` },
+                { id: 2, text: "About", path: `/about` },
+                { id: 3, text: "Contact Us", path: `/contact` },
+                { id: 4, text: "Testimonials", path: `/testimonial` },
             ],
             navbarMobileActive: "",
             toggleIcon: "fa-bars",
