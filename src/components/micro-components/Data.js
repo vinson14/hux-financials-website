@@ -1,12 +1,20 @@
-import GoogleSpreadSheet from 'google-spreadsheet'
+import { GoogleSpreadsheet } from "google-spreadsheet";
 
-const doc = new GoogleSpreadSheet('1pz8JCy_ZvHgik3fNElwTSFybFvX-Iw1iR2-2-Nz-uXE');
+async function accessSpreadsheet() {
+    const doc = new GoogleSpreadsheet(
+        process.env.REACT_APP_GOOGLE_SPREADSHEET_ID
+    );
+    const creds = {
+        private_key: process.env.REACT_APP_GOOGLE_PRIVATE_KEY,
+        client_email: process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL,
+    };
+    await doc.useServiceAccountAuth(creds);
+    await doc.loadInfo(); // loads document properties and worksheets
 
-await doc.useServiceAccountAuth({
-    client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    private_key: process.env.GOOGLE_PRIVATE_KEY
-})
+    return doc
+}
 
-await doc.loadInfo();
-console.log(doc.title);
+const doc = accessSpreadsheet()
+
+export default doc
 
