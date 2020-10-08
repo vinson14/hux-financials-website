@@ -63,7 +63,7 @@ class NavBarMobile extends React.Component {
                     <Button
                         id="toggle-navbar-btn"
                         variant="outline-dark"
-                        className="z-depth-0 p-5 border-0"
+                        className="z-depth-0 p-5 border-0 shadow-none"
                         onClick={this.toggleNavBarMobile}
                     >
                         <i

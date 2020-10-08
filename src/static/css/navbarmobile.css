@@ -53,6 +53,11 @@ a.a-text {
     z-index: 6;
 }
 
+#toggle-navbar-btn:hover {
+    background-color: transparent !important;
+}
+
+
 #brand-icon-link {
     z-index: 6;
 }
