@@ -3,8 +3,6 @@ import React from "react";
 import NavBarMobile from "./NavBarMobile";
 import NavBar from "./NavBar";
 
-const baseUrl = "/hux-financials-website";
-
 class Header extends React.Component {
     constructor(props) {
         super(props);

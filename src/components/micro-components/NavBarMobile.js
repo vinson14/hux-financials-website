@@ -1,13 +1,10 @@
 import React from "react";
-import { Nav, Image } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Nav, Image, Button } from "react-bootstrap";
+import { NavLink, Link } from "react-router-dom";
 
-import logoLightCropped from "../../static/logos/light-cropped.png";
 import logoLight from "../../static/logos/light.png";
 import logoDark from "../../static/logos/dark.png";
 import "../../static/css/navbarmobile.css";
-
-const baseUrl = "/hux-financials-website";
 
 class NavBarMobile extends React.Component {
     constructor(props) {
@@ -60,19 +57,20 @@ class NavBarMobile extends React.Component {
         return (
             <div className={`${this.state.position}-top bg-${this.state.bg}`}>
                 <div className="d-flex justify-content-between">
-                    <a id="brand-icon-link">
+                    <Link id="brand-icon-link" to={this.state.links[0].path}>
                         <Image src={this.state.logo} width="250" />
-                    </a>
-                    <a
+                    </Link>
+                    <Button
                         id="toggle-navbar-btn"
-                        className="btn bg-transparent z-depth-0 p-5 d-flex align-items-center"
+                        variant="outline-dark"
+                        className="z-depth-0 p-5 border-0"
                         onClick={this.toggleNavBarMobile}
                     >
                         <i
                             id="toggle-navbar-icon"
                             className={`fas ${this.state.toggleIcon} fa-2x ${this.state.iconColor}`}
                         ></i>
-                    </a>
+                    </Button>
                 </div>
                 <Nav
                     id="sidebar"

@@ -6,8 +6,6 @@ import logoLightCropped from "../../static/logos/light-cropped.png";
 
 import "../../static/css/navbar.css";
 
-const baseUrl = "/hux-financials-website";
-
 class NavBar extends React.Component {
     constructor(props) {
         super(props);

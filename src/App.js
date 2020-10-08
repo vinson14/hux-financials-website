@@ -9,8 +9,6 @@ import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
 import Profile from "./components/Profile";
 
-const baseUrl = "/hux-financials-website";
-
 function App(props) {
     return (
         <Router basename="/">

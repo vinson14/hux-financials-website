@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import ProfileCard from "./micro-components/ProfileCard";
 import Header from "./micro-components/Header";
