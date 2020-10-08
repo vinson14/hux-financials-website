@@ -53,6 +53,10 @@ a.a-text {
     z-index: 6;
 }
 
+#brand-icon-link {
+    z-index: 6;
+}
+
 .navbar-mobile-active {
   -webkit-transform: translateX(0%) !important;
   transform: translateX(0%) !important;

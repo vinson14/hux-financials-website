@@ -60,7 +60,7 @@ class NavBarMobile extends React.Component {
         return (
             <div className={`${this.state.position}-top bg-${this.state.bg}`}>
                 <div className="d-flex justify-content-between">
-                    <a>
+                    <a id="brand-icon-link">
                         <Image src={this.state.logo} width="250" />
                     </a>
                     <a
