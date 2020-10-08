@@ -34,7 +34,7 @@ class About extends React.Component {
                 <Header position="sticky" bg="white" />
                 <Container className="h-100 d-flex flex-column justify-content-center align-items-center pt-5">
                     <Row>
-                        <h1 className="pri-font font-weight-bold mb-5">Our Team</h1>
+                        <h1 className="pri-font mb-5">Our Team</h1>
                     </Row>
                     <Row>
                         {profiles.map((profile) => (

@@ -12,6 +12,14 @@ body,
     text-align: center;
 }
 
+.bg-red-solid {
+    background-color: #d31145;
+}
+
+.border-red {
+    border-color: #d31145 !important;
+}
+
 .pri-font {
     font-family: "Karla", sans-serif !important;
 }

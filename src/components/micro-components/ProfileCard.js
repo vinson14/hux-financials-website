@@ -8,9 +8,8 @@ class ProfileCard extends React.Component {
 
         const button_data = {
             text: "See more",
-            href: `${this.props.url}/${this.props.profile.name}`
+            href: `/about/${this.props.profile.name}`
         }
-
         return (
             <Card className="border-0 my-3">
                 <Card.Img

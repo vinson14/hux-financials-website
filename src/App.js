@@ -20,7 +20,7 @@ function App(props) {
                     <Route path='/' exact component={Home} />
                     <Route path='/about' exact component={About} />
                     <Route
-                        path='/about/name'
+                        path='/about/:name'
                         component={Profile}
                     />
                     <Route
