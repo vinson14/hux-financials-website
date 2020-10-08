@@ -21,7 +21,7 @@ class Header extends React.Component {
 
     handleWindowResize = () => {
         this.setState({
-            isMobile: window.innerWidth < 768,
+            isMobile: window.innerWidth < 992,
         });
     };
 
