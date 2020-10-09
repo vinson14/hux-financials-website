@@ -13,7 +13,7 @@ class ProfileCard extends React.Component {
         return (
             <Card className="border-0 my-3">
                 <Card.Img
-                    src={require(`../../static/img/${this.props.profile.name}.jpg`)}
+                    src={require(`../../static/img/${this.props.profile.img}.jpg`)}
                 />
                 <Card.Body>
                     <Card.Title className="pri-font font-weight-bold">{this.props.profile.name}</Card.Title>
