@@ -8,16 +8,16 @@ class ProfileCard extends React.Component {
 
         const button_data = {
             text: "See more",
-            href: `/about/${this.props.profile.name}`
+            href: `/about/${this.props.profile.link}`
         }
         return (
             <Card className="border-0 my-3">
                 <Card.Img
-                    src={require(`../../static/img/${this.props.profile.img}.jpg`)}
+                    src={require(`../../static/img/${this.props.profile.img}`)}
                 />
                 <Card.Body>
                     <Card.Title className="pri-font font-weight-bold">{this.props.profile.name}</Card.Title>
-                    <Card.Text className="sec-font">Associate Financial Consultant</Card.Text>
+                    <Card.Text className="sec-font">{this.props.profile.title}</Card.Text>
                     <SecButton data={button_data} />
                 </Card.Body>
             </Card>
