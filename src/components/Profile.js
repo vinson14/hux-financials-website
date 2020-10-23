@@ -14,7 +14,6 @@ class Profile extends React.Component {
         };
     }
 
-
     getPeople = async () => {
         const doc = await Tabletop.init({
             key:
@@ -24,8 +23,10 @@ class Profile extends React.Component {
 
         this.setState({
             isLoaded: true,
-            person: doc.Agents.elements[0],
-            testimonials: doc.Testimonials.elements,
+            person: doc.Agents.elements.find(p => p.link === this.props.match.params.name),
+            testimonials: doc.Testimonials.elements.filter(
+                t => t.link === this.props.match.params.name
+            ),
         });
 
         console.log(doc.Agents.elements);
