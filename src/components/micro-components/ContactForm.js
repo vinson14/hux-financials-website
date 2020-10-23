@@ -13,14 +13,29 @@ class ContactForm extends React.Component {
                             placeholder="Name"
                         />
                     </Col>
-                    <Col>
+                    <Col xs={6} md={4}>
+                        <Form.Control
+                            type="number"
+                            name="mobile"
+                            placeholder="Mobile No."
+                        />
+                    </Col>
+                    <Col xs={6} md={4}>
                         <Form.Control
                             type="email"
-                            name="_replyto"
+                            name="email"
                             placeholder="Email"
                         />
                     </Col>
-                    <Col>
+                    <Col xs={6} md={4}>
+                        <Form.Control
+                            as="textarea"
+                            name="email"
+                            placeholder="Message"
+                            rows={20}
+                        />
+                    </Col>
+                    <Col xs={6} md={4}>
                         <Button variant="primary" type="submit">
                             Submit
                         </Button>
